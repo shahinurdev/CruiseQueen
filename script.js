@@ -64,5 +64,5 @@ function firstClass() {
     let total = firstClassIncrise * 150 + economyIncrise * 100;
     const withVat = Math.round(total * 0.1);
     const conformationAmount = total + withVat;
-    document.getElementById('conformationAmount').innerText = conformationAmount;
+    document.getElementById('conformationAmount').innerText = "$ " + conformationAmount;
 }
