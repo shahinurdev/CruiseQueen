@@ -25,18 +25,14 @@
             </ul>
         </nav>
     </header>
-
     <!--Booking Section-->
     <main class="main-content container">
-
         <div class="booking-content">
             <h1>Cruise Queen</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                 industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
                 scrambled it to make a type specimen book./p>
         </div>
-
-
         <div class="booking-form">
             <h3>Book Ocean Time</h3>
             <div class="input-group">
@@ -60,28 +56,22 @@
             <div class="input-group f-class">
                 <div>
                     <label>First Class ($ <span id="firstClassAmount"> 150</span>)</label>
-                    <input id="inputFirstClass" class="inp-style inp-width" value="1" type="text">
+                    <input id="firstClassInput" class="inp-style inp-width" value="1" type="text">
                 </div>
-
                 <div class="plus-minus-btn">
-                    <button onclick="firstClass(true) " id="firsClassPlus-btn" class="btn btn-default cursor"><i class="fas fa-plus "></i></button>
-
-                    <button onclick="firstClass(false) "  id="firsClassMinus-btn" class="btn btn-default cursor"><i class="fas fa-minus"></i></button>
+                    <button onclick="ticketIncreaseAndAmount('firstClass',true)"  class="btn btn-default cursor"><i class="fas fa-plus "></i></button>
+                    <button onclick="ticketIncreaseAndAmount('firstClass',false) "   class="btn btn-default cursor"><i class="fas fa-minus"></i></button>
                 </div>
-
             </div>
-
             <div class="input-group f-class">
                 <div>
-                    
-                    <label>Economy ($ <span id="EconomyAmount">100</span> )</label>
-                    <input id="EconomyInput" class="inp-style inp-width" value="1">
+                    <label>Economy ($ <span id="economyAmount">100</span> )</label>
+                    <input id="economyInput" class="inp-style inp-width" value="1">
                 </div>
                 <div class="plus-minus-btn">
-                    <button onclick="economy (true)" id="EconomyPlus-btn" class="btn btn-default cursor"><i class="fas fa-plus"></i></button>
-                    <button onclick="economy (false)" id="EconomyMinus-btn" class="btn btn-default cursor"><i class="fas fa-minus"></i></button>
+                    <button onclick="ticketIncreaseAndAmount('economy',true)"  class="btn btn-default cursor"><i class="fas fa-plus"></i></button>
+                    <button onclick="ticketIncreaseAndAmount('economy',false)"  class="btn btn-default cursor"><i class="fas fa-minus"></i></button>
                 </div>
-                
             </div>
             <div class="calculations">
                 <div class="amount">
@@ -92,7 +82,6 @@
                         <p>$ <span id="subTotal">250</span> </p>
                     </div>
                 </div>
-
                 <div class="amount">
                     <div class="left">
                         <p>Charge 10% VAT</p>
@@ -118,5 +107,4 @@
     <!--Thank You-->
     <!-- Welcome -->
 </body>
-
 </html>

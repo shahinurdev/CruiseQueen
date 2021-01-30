@@ -1,47 +1,30 @@
-// first class handler
-function firstClass(isIncrease) {
-
-    let inputFirstClass = document.getElementById('inputFirstClass');
-    let firstClassValue = parseInt(inputFirstClass.value);
-    let firstClassIncrease = firstClassValue;
+function ticketIncreaseAndAmount(ticket, isIncrease) {
+    let input = document.getElementById(ticket + "Input");
+    let inputCount = parseInt(input.value);
+    let inputIncrise = inputCount;
     if (isIncrease == true) {
-        firstClassIncrease = firstClassValue + 1;
+        inputIncrise = inputCount + 1;
     };
-    if (isIncrease == false && firstClassValue > 0) {
-
-        firstClassIncrease = firstClassValue - 1;
+    if (isIncrease == false && inputCount > 0) {
+        inputIncrise = inputCount - 1;
     }
-    inputFirstClass.value = firstClassIncrease;
-    const firstClassAmount = firstClassIncrease * 150;
-    document.getElementById("firstClassAmount").innerText = firstClassAmount;
-    calculate();
-}
-// Economy handler
-function economy (isIncrease){
-    let inputFirstClass = document.getElementById('EconomyInput');
-    let firstClassValue = parseInt(inputFirstClass.value);
-    let firstClassDecrease = firstClassValue;
-    if(isIncrease == true){
-        firstClassDecrease = firstClassValue + 1;
-    };
-    if(isIncrease == false && firstClassValue > 0 ){
-        firstClassDecrease = firstClassValue - 1;
+    input.value = inputIncrise;
+    let ticketTotal = 0;
+    if (ticket == "firstClass") {
+        ticketTotal = inputIncrise * 150;
     }
-    inputFirstClass.value = firstClassDecrease;
-    const firstClassAmount = firstClassDecrease * 100;
-    document.getElementById("EconomyAmount").innerText = firstClassAmount;
-    calculate();
-}
-
+    if (ticket == "economy") {
+        ticketTotal = inputIncrise * 100;
+    }
+    document.getElementById(ticket + "Amount").innerText = ticketTotal;
+    calculate()
+};
 // calculate
 function calculate() {
-    let inputFirstClass = document.getElementById("inputFirstClass");
-    let inputFirstClassCount = parseInt(inputFirstClass.value);
+    let firstClassInput = getInputValue("firstClass");
+    let economyInput = getInputValue("economy");
 
-    let EconomyInput = document.getElementById("EconomyInput");
-    let EconomyInputCount = parseInt(EconomyInput.value);
-
-    let subTotal = inputFirstClassCount * 150 + EconomyInputCount * 100;
+    let subTotal = firstClassInput * 150 + economyInput * 100;
 
     document.getElementById("subTotal").innerText = subTotal;
 
@@ -51,6 +34,10 @@ function calculate() {
     const total = subTotal + vat;
 
     document.getElementById("total").innerText = total;
+};
 
-
+function getInputValue(ticket) {
+    let input = document.getElementById(ticket + "Input");
+    let inputValue = parseInt(input.value);
+    return inputValue;
 }
