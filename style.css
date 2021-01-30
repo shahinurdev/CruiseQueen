@@ -12,6 +12,7 @@ body{
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
+    height: 600px;
 }
 nav{
     height: 50px;
@@ -125,4 +126,15 @@ nav ul li a:hover, a.active{
 .cursor{
     cursor: pointer;
    
+}
+#conformationCard{
+    background-color: #F3F5FF;
+    display: none;
+    text-align: center;
+    margin-top: 18%;
+    margin-left: 25%;
+    width: 600px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 15px;
 }

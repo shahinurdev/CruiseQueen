@@ -26,7 +26,7 @@
         </nav>
     </header>
     <!--Booking Section-->
-    <main class="main-content container">
+    <main id="bookingContainer" class="main-content container">
         <div class="booking-content">
             <h1>Cruise Queen</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -100,9 +100,30 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button id="book-btn" class="btn-style">Book Now</button>
         </div>
     </main>
+     <!-- conformation card -->
+     <div id="conformationCard" class="card">
+        <h3 class="card-header">Happy Journey</h3>
+        <div class="card-body">
+          <h3 class="card-title">Your Ticket Successfully Done</h3>
+          <h4 class="card-text">
+            <p>First Class Tiket : <span >
+                <input type="text" id="firstClassConformTicket">
+            </span></p>
+            
+            <p>Economy Tiket : <span><input type="text" id="economyConformTicket"></span></p>
+            <p>Total Cost(Including Vat) : <span>
+                <input id="conformationAmount" type="text">
+
+            </span> </p>
+          </h4> 
+          <br>
+          <button onclick="location.reload();" class="btn btn-info">Refresh</button>
+        </div>
+      </div>
+
     <script type="text/javascript" src="script.js"></script>
     <!--Thank You-->
     <!-- Welcome -->

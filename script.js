@@ -35,9 +35,33 @@ function calculate() {
 
     document.getElementById("total").innerText = total;
 };
-
 function getInputValue(ticket) {
     let input = document.getElementById(ticket + "Input");
     let inputValue = parseInt(input.value);
     return inputValue;
+}
+// conformation script
+document.getElementById("book-btn").addEventListener("click", function () {
+    document.getElementById("bookingContainer").style.display = "none";
+    document.getElementById("conformationCard").style.display = "block";
+    firstClass()
+});
+// ticket count
+function firstClass() {
+    let firstClassInput = document.getElementById("firstClassInput");
+    let firstClassValue = parseInt(firstClassInput.value);
+    let firstClassIncrise = firstClassValue++;
+    firstClassInput.value = firstClassIncrise;
+    document.getElementById("firstClassConformTicket").value = firstClassIncrise;
+
+    let economyInput = document.getElementById("economyInput");
+    let economyValue = parseInt(economyInput.value);
+    let economyIncrise = economyValue++;
+    economyInput.value = economyIncrise;
+    document.getElementById("economyConformTicket").value = economyIncrise;
+
+    let total = firstClassIncrise * 150 + economyIncrise * 100;
+    const withVat = Math.round(total * 0.1);
+    const conformationAmount = total + withVat;
+    document.getElementById('conformationAmount').value = conformationAmount;
 }
