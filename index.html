@@ -1,131 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curse Booking</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!--Header and Menu Section-->
-    <header class="container">
-        <nav>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Curse Booking</title>
+      <!-- Fonts -->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+         rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+      <!-- Stylesheet -->
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <!--Header and Menu Section-->
+      <header class="container">
+         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a class="active" href="#">Sign Up</a></li>
+               <li><a href="#">Home</a></li>
+               <li><a href="#">About Us</a></li>
+               <li><a href="#">Contact</a></li>
+               <li><a class="active" href="#">Sign Up</a></li>
             </ul>
-        </nav>
-    </header>
-    <!--Booking Section-->
-    <main id="bookingContainer" class="main-content container">
-        <div class="booking-content">
+         </nav>
+      </header>
+      <!--Booking Section-->
+      <main id="bookingContainer" class="main-content container">
+         <div class="booking-content">
             <h1>Cruise Queen</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book./p>
-        </div>
-        <div class="booking-form">
+               industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+               scrambled it to make a type specimen book./p>
+         </div>
+         <div class="booking-form">
             <h3>Book Ocean Time</h3>
             <div class="input-group">
-                <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
+               <label for="">Flying From</label>
+               <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
             </div>
             <div class="input-group">
-                <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
+               <label for="">Flying To</label>
+               <input class="inp-style" type="text" name="" placeholder="New York, United States">
             </div>
             <div class="inputs">
-                <div class="input-group">
-                    <label" for="">Departure</label>
-                        <input class="inp-style" type="date" name="">
-                </div>
-                <div class="input-group">
-                    <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
-                </div>
+               <div class="input-group">
+                  <label" for="">Departure</label>
+                  <input class="inp-style" type="date" name="">
+               </div>
+               <div class="input-group">
+                  <label for="">Return</label>
+                  <input class="inp-style" type="date" name="">
+               </div>
             </div>
             <div class="input-group f-class">
-                <div>
-                    <label>First Class ($ <span id="firstClassAmount"> 150</span>)</label>
-                    <input id="firstClassInput" class="inp-style inp-width" value="1" type="text">
-                </div>
-                <div class="plus-minus-btn">
-                    <button onclick="ticketIncreaseAndAmount('firstClass',true)"  class="btn btn-default cursor"><i class="fas fa-plus "></i></button>
-                    <button onclick="ticketIncreaseAndAmount('firstClass',false) "   class="btn btn-default cursor"><i class="fas fa-minus"></i></button>
-                </div>
+               <div>
+                  <label>First Class ($ <span id="firstClassAmount"> 150</span>)</label>
+                  <input id="firstClassInput" class="inp-style inp-width" value="1" type="text">
+               </div>
+               <div class="plus-minus-btn">
+                  <button onclick="ticketIncreaseAndAmount('firstClass',true)" class="btn btn-default cursor"><i
+                     class="fas fa-plus "></i></button>
+                  <button onclick="ticketIncreaseAndAmount('firstClass',false) " class="btn btn-default cursor"><i
+                     class="fas fa-minus"></i></button>
+               </div>
             </div>
             <div class="input-group f-class">
-                <div>
-                    <label>Economy ($ <span id="economyAmount">100</span> )</label>
-                    <input id="economyInput" class="inp-style inp-width" value="1">
-                </div>
-                <div class="plus-minus-btn">
-                    <button onclick="ticketIncreaseAndAmount('economy',true)"  class="btn btn-default cursor"><i class="fas fa-plus"></i></button>
-                    <button onclick="ticketIncreaseAndAmount('economy',false)"  class="btn btn-default cursor"><i class="fas fa-minus"></i></button>
-                </div>
+               <div>
+                  <label>Economy ($ <span id="economyAmount">100</span> )</label>
+                  <input id="economyInput" class="inp-style inp-width" value="1">
+               </div>
+               <div class="plus-minus-btn">
+                  <button onclick="ticketIncreaseAndAmount('economy',true)" class="btn btn-default cursor"><i
+                     class="fas fa-plus"></i></button>
+                  <button onclick="ticketIncreaseAndAmount('economy',false)" class="btn btn-default cursor"><i
+                     class="fas fa-minus"></i></button>
+               </div>
             </div>
             <div class="calculations">
-                <div class="amount">
-                    <div class="left">
-                        <p>Subtotal</p>
-                    </div>
-                    <div class="right">
-                        <p>$ <span id="subTotal">250</span> </p>
-                    </div>
-                </div>
-                <div class="amount">
-                    <div class="left">
-                        <p>Charge 10% VAT</p>
-                    </div>
-                    <div class="right">
-                        <p>$ <span id="vatAmount" >25</span> </p>
-                    </div>
-                </div>
-                <hr>
-                <div class="amount">
-                    <div class="left">
-                        <h4>Total</h4>
-                    </div>
-                    <div class="right">
-                        <p>$ <span id="total">275</span> </p>
-                    </div>
-                </div>
+               <div class="amount">
+                  <div class="left">
+                     <p>Subtotal</p>
+                  </div>
+                  <div class="right">
+                     <p>$ <span id="subTotal">250</span> </p>
+                  </div>
+               </div>
+               <div class="amount">
+                  <div class="left">
+                     <p>Charge 10% VAT</p>
+                  </div>
+                  <div class="right">
+                     <p>$ <span id="vatAmount">25</span> </p>
+                  </div>
+               </div>
+               <hr>
+               <div class="amount">
+                  <div class="left">
+                     <h4>Total</h4>
+                  </div>
+                  <div class="right">
+                     <p>$ <span id="total">275</span> </p>
+                  </div>
+               </div>
             </div>
             <button id="book-btn" class="btn-style">Book Now</button>
-        </div>
-    </main>
-     <!-- conformation card -->
-     <div id="conformationCard" class="card">
-        <h3 class="card-header">Happy Journey</h3>
-        <div class="card-body">
-          <h3 class="card-title">Your Ticket Successfully Done</h3>
-          <h4 class="card-text">
-            <p>First Class Tiket : <span >
-                <input type="text" id="firstClassConformTicket">
-            </span></p>
-            
-            <p>Economy Tiket : <span><input type="text" id="economyConformTicket"></span></p>
-            <p>Total Cost(Including Vat) : <span>
-                <input id="conformationAmount" type="text">
-
-            </span> </p>
-          </h4> 
-          <br>
-          <button onclick="location.reload();" class="btn btn-info">Refresh</button>
-        </div>
+         </div>
+      </main>
+      <!-- conformation card -->
+      <div id="conformationCard" class="card">
+         <h2 class="card-header">Happy Journey</h2>
+         <div class="card-body">
+            <h2 class="card-title">Your Ticket Successfully Done</h2>
+            <br>
+            <div class="card-text">
+               <h3> <strong>First Class Ticket : </strong> 
+                  <span id="firstClassConformTicket">
+                  </span>
+               </h3>
+               <br>
+               <h3>
+                  <strong> Economy Ticket : </strong>
+                  <span id="economyConformTicket">
+                  </span>
+               </h3>
+               <br>
+               <h3> <strong>Total Cost(Including Vat) :</strong>
+                  <span id="conformationAmount">
+                  </span>
+               </h3>
+            </div>
+            <br>
+            <button onclick="location.reload();" class="btn btn-info">Refresh</button>
+         </div>
       </div>
-
-    <script type="text/javascript" src="script.js"></script>
-    <!--Thank You-->
-    <!-- Welcome -->
-</body>
+      <script type="text/javascript" src="script.js"></script>
+      <!--Thank You-->
+      <!-- Welcome -->
+   </body>
 </html>
